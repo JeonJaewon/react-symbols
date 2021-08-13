@@ -1,6 +1,10 @@
 # react-symbols
+![license](https://img.shields.io/npm/l/react-symbols)
+![version](https://img.shields.io/npm/v/react-symbols)
+![last-commit](https://img.shields.io/github/last-commit/JeonJaewon/react-symbols)
+
 ## About
-Simply Add symbols in your React.js application by insert `react-symbols` components.
+Simply Add symbols to your React.js application by insert `react-symbols` components.
 
 `react-symbols` supports Typescript.
 
