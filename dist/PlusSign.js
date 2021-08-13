@@ -44,18 +44,25 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlusSign = void 0;
 var react_1 = __importStar(require("react"));
-var styled_components_1 = __importDefault(require("styled-components"));
+var styled_components_1 = __importStar(require("styled-components"));
 var S = {
-    Wrapper: styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    &:before, &:after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n    };\n    &:before {\n      left: 0.4em;\n      width: 0.2em;\n      height: 1em;\n    };\n    &:after {\n      left: 0;\n      top: 0.4em;\n      width: 1em;\n      height: 0.2em;\n    }\n  "], ["\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    &:before, &:after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n    };\n    &:before {\n      left: 0.4em;\n      width: 0.2em;\n      height: 1em;\n    };\n    &:after {\n      left: 0;\n      top: 0.4em;\n      width: 1em;\n      height: 0.2em;\n    }\n  "])), function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.color; }),
+    Wrapper: styled_components_1.default.span(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ", ";\n  "], ["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ",
+        ";\n  "])), function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.color; }, function (props) {
+        var result = calculateStyle(props.weight);
+        return styled_components_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n        &::before {\n          left: ", "em;\n          width: ", "em;\n        };\n        &::after {\n          top: ", "em;\n          height: ", "em;\n        };\n      "], ["\n        &::before {\n          left: ", "em;\n          width: ", "em;\n        };\n        &::after {\n          top: ", "em;\n          height: ", "em;\n        };\n      "])), result.offset, result.thickness, result.offset, result.thickness);
+    }),
+};
+var calculateStyle = function (weight) {
+    if (weight === void 0) { weight = 1; }
+    var thickness = 0.2 * weight;
+    var offset = 0.5 - (thickness / 2);
+    return { thickness: thickness, offset: offset };
 };
 exports.PlusSign = react_1.forwardRef(function PlusSign(_a, ref) {
-    var size = _a.size, _b = _a.color, color = _b === void 0 ? '#F1F3F4' : _b, props = __rest(_a, ["size", "color"]);
-    return (react_1.default.createElement(S.Wrapper, __assign({ size: size, color: color, ref: ref }, props)));
+    var size = _a.size, _b = _a.color, color = _b === void 0 ? '#F1F3F4' : _b, _c = _a.weight, weight = _c === void 0 ? 1 : _c, props = __rest(_a, ["size", "color", "weight"]);
+    return (react_1.default.createElement(S.Wrapper, __assign({ size: size, color: color, weight: weight, ref: ref }, props)));
 });
-var templateObject_1;
+var templateObject_1, templateObject_2;

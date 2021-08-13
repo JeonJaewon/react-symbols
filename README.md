@@ -1,14 +1,19 @@
-# react-component-module-frame
-## What is this project about?
-#### This template was built to make publishing react-components easy. All the basic settings such as tsconfig.json and package.json are done. It is up to you to modify the setting for your own taste.
+# react-symbols
+## About
+Simply Add symbols in your React.js application by insert `react-symbols` components.
 
------------------------------------------------------------------------------------------------------------------------
+`react-symbols` supports Typescript.
 
-#### To download this project  
+## Installation
+```shell
+$ yarn add react-symbols
 ```
-git clone https://github.com/tofusoup429/react-component-module-frame.git
+
+## Usage
+```jsx
+<button className='wrapper'>
+  <span className='label'>ADD</span>
+  <PlusSign weight={1.2} size='20px'/>
+</button>
 ```
------------------------------------------------------------------------------------------------------------------------
-
-
-
+![plus-example](https://user-images.githubusercontent.com/23352663/129325401-408a1c74-4897-4406-9e81-0344cf44a1a4.png)
