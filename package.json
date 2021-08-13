@@ -1,0 +1,35 @@
+{
+  "name": "react-symbols",
+  "version": "0.0.2",
+  "description": "Handy React.js components for various symbols",
+  "homepage": "https://jnj1.tistory.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeonJaewon/react-symbols"
+  },
+  "author": "Jeon Jaewon",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "@types/styled-components": "^5.1.9",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "files": [
+    "/dist",
+    "package.json"
+  ]
+}
