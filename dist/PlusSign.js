@@ -45,11 +45,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PlusSign = void 0;
+exports.CrossSign = exports.PlusSign = void 0;
 var react_1 = __importStar(require("react"));
 var styled_components_1 = __importStar(require("styled-components"));
 var S = {
-    Wrapper: styled_components_1.default.span(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ", ";\n  "], ["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ",
+    PlusSignWrapper: styled_components_1.default.span(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ", ";\n  "], ["\n    display: inline-block;\n    position: relative;\n    font-size: ", ";\n    width: ", ";\n    height: ", ";\n    cursor: pointer;\n    \n    &::before, &::after {\n      position: absolute;\n      border-radius: 10px;\n      background-color: ", ";\n      content: ' ';\n      transition: all 0.4s;\n    };\n    &::before { \n      top: 0;\n      height: 1em;\n    };\n    &::after {\n      left: 0;\n      width: 1em;\n    };\n    ",
         ";\n  "])), function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.size; }, function (props) { return props.color; }, function (props) {
         var result = calculateStyle(props.weight);
         return styled_components_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n        &::before {\n          left: ", "em;\n          width: ", "em;\n        };\n        &::after {\n          top: ", "em;\n          height: ", "em;\n        };\n      "], ["\n        &::before {\n          left: ", "em;\n          width: ", "em;\n        };\n        &::after {\n          top: ", "em;\n          height: ", "em;\n        };\n      "])), result.offset, result.thickness, result.offset, result.thickness);
@@ -63,6 +63,12 @@ var calculateStyle = function (weight) {
 };
 exports.PlusSign = react_1.forwardRef(function PlusSign(_a, ref) {
     var size = _a.size, _b = _a.color, color = _b === void 0 ? '#F1F3F4' : _b, _c = _a.weight, weight = _c === void 0 ? 1 : _c, props = __rest(_a, ["size", "color", "weight"]);
-    return (react_1.default.createElement(S.Wrapper, __assign({ size: size, color: color, weight: weight, ref: ref }, props)));
+    return (react_1.default.createElement(S.PlusSignWrapper, __assign({ size: size, color: color, weight: weight, ref: ref }, props)));
 });
-var templateObject_1, templateObject_2;
+var CrossSignWrapper = styled_components_1.default(S.PlusSignWrapper)(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  &::before, &::after {\n    transform: rotate(45deg);\n  }\n"], ["\n  &::before, &::after {\n    transform: rotate(45deg);\n  }\n"])));
+var CrossSign = function (_a) {
+    var size = _a.size, _b = _a.color, color = _b === void 0 ? '#F1F3F4' : _b, _c = _a.weight, weight = _c === void 0 ? 1 : _c, props = __rest(_a, ["size", "color", "weight"]);
+    return (react_1.default.createElement(CrossSignWrapper, __assign({ size: size, color: color, weight: weight }, props)));
+};
+exports.CrossSign = CrossSign;
+var templateObject_1, templateObject_2, templateObject_3;

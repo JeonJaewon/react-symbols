@@ -5,4 +5,7 @@ interface PlusSignProps extends ComponentPropsWithoutRef<'span'> {
     weight?: number;
 }
 export declare const PlusSign: React.ForwardRefExoticComponent<PlusSignProps & React.RefAttributes<HTMLSpanElement>>;
+interface CrossSignProps extends PlusSignProps {
+}
+export declare const CrossSign: ({ size, color, weight, ...props }: CrossSignProps) => JSX.Element;
 export {};
