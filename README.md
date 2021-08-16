@@ -14,10 +14,15 @@ $ yarn add react-symbols
 ```
 
 ## Usage
-```jsx
+```tsx
 <button className='wrapper'>
   <span className='label'>ADD</span>
-  <PlusSign weight={1.2} size='20px'/>
+  <PlusSign size='20px'/>
+</button>
+<button className='wrapper'>
+  <span className='label'>DELETE</span>
+  <CrossSign size='20px' weight={1.2}/>
 </button>
 ```
-![plus-example](https://user-images.githubusercontent.com/23352663/129325401-408a1c74-4897-4406-9e81-0344cf44a1a4.png)
+![signs-example](https://user-images.githubusercontent.com/23352663/129549150-5f979dde-4cf2-4f42-999e-05c586ba2bfb.png)
+
