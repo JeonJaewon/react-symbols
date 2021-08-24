@@ -17,12 +17,17 @@ $ yarn add react-symbols
 ```tsx
 <button className='wrapper'>
   <span className='label'>ADD</span>
-  <PlusSign size='20px'/>
+  <PlusSign size='20px' />
 </button>
+
 <button className='wrapper'>
   <span className='label'>DELETE</span>
-  <CrossSign size='20px' weight={1.2}/>
+  <CrossSign size='20px' weight={1.2} />
+</button>
+
+<button className='wrapper'>
+  <span className='label'>MORE</span>
+  <Chevron size='20px' />
 </button>
 ```
-![signs-example](https://user-images.githubusercontent.com/23352663/129549150-5f979dde-4cf2-4f42-999e-05c586ba2bfb.png)
-
+![example](https://user-images.githubusercontent.com/23352663/130579237-4d179f2c-eec7-4ac6-a78a-ff71728a46b0.png)
