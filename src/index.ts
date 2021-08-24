@@ -1,1 +1,2 @@
-export * from './Signs'
+export * from './Signs';
+export * from './Chevron';

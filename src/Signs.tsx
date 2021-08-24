@@ -42,7 +42,7 @@ const PlusSignWrapper = styled.span<SignProps>`
     border-radius: 10px;
     background-color: ${props => props.color};
     content: ' ';
-    transition: all 0.4s;
+    transition: all 0.4s ease;
   };
   &::before { 
     top: 0;
@@ -96,6 +96,7 @@ const CrossSignWrapper = styled.span<SignProps>`
     top: 50%;
     left: 50%;
     width: 1em;
+    transition: all 0.4s ease;
     transform-origin: top left;
     height: ${props => 0.2 * (props.weight ?? 1)}em;
     background-color: ${props => props.color};
