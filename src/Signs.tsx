@@ -23,7 +23,12 @@ export const PlusSign = forwardRef((
   }
 );
 
-const calculateStyle = (weight: number = 1) => {
+interface PlusSignInnerStyles {
+  thickness: number;
+  offset: number;
+}
+
+const calculateInnerStyles = (weight: number = 1): PlusSignInnerStyles => {
   const thickness = 0.2 * weight;
   const offset = 0.5 - (thickness / 2);
   return { thickness, offset };
@@ -52,16 +57,17 @@ const PlusSignWrapper = styled.span<SignProps>`
     left: 0;
     width: 1em;
   };
+  
   ${props => {
-    const result = calculateStyle(props.weight);
+    const innerStyles = calculateInnerStyles(props.weight);
     return css`
       &::before {
-        left: ${result.offset}em;
-        width: ${result.thickness}em;
+        left: ${innerStyles.offset}em;
+        width: ${innerStyles.thickness}em;
       };
       &::after {
-        top: ${result.offset}em;
-        height: ${result.thickness}em;
+        top: ${innerStyles.offset}em;
+        height: ${innerStyles.thickness}em;
       };
     `
   }};
