@@ -52,7 +52,7 @@ exports.Chevron = void 0;
 var react_1 = __importStar(require("react"));
 var styled_components_1 = __importDefault(require("styled-components"));
 var ChevronWrapper = styled_components_1.default.svg(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  transition: all 0.4s ease;\n"], ["\n  transition: all 0.4s ease;\n"])));
-exports.Chevron = (0, react_1.forwardRef)(function (_a, ref) {
+exports.Chevron = react_1.forwardRef(function (_a, ref) {
     var size = _a.size, props = __rest(_a, ["size"]);
     return (react_1.default.createElement(ChevronWrapper, __assign({ width: size, height: size, viewBox: "0 0 14 24", ref: ref, fill: '#F1F3F4' }, props),
         react_1.default.createElement("g", null,
