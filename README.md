@@ -27,7 +27,7 @@ $ yarn add react-symbols
 
 <button className='wrapper'>
   <span className='label'>MORE</span>
-  <Chevron size='20px' />
+  <Chevron size='20px' color='#39A388' />
 </button>
 ```
-![example](https://user-images.githubusercontent.com/23352663/130579237-4d179f2c-eec7-4ac6-a78a-ff71728a46b0.png)
+![example](https://user-images.githubusercontent.com/23352663/135595300-b2f46349-87cd-49d2-a146-d63d72e3c190.png)
