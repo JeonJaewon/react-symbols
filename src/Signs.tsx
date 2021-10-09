@@ -37,15 +37,11 @@ const calculateInnerStyles = (weight: number = 1): PlusSignInnerStyles => {
 const PlusSignWrapper = styled.span<SignProps>`
   display: inline-block;
   position: relative;
-  font-size: ${props => props.size};
-  width: ${props => props.size};
-  height: ${props => props.size};
   cursor: pointer;
   
   &::before, &::after {
     position: absolute;
     border-radius: 10px;
-    background-color: ${props => props.color};
     content: ' ';
     transition: all 0.4s ease;
   };
@@ -59,8 +55,15 @@ const PlusSignWrapper = styled.span<SignProps>`
   };
   
   ${props => {
+    const { size, color } = { ...props };
     const innerStyles = calculateInnerStyles(props.weight);
     return css`
+      font-size: ${size};
+      width: ${size};
+      height: ${size};
+      &::before, &::after {
+        background-color: ${color};
+      };
       &::before {
         left: ${innerStyles.offset}em;
         width: ${innerStyles.thickness}em;
@@ -92,10 +95,8 @@ export const CrossSign = forwardRef((
 const CrossSignWrapper = styled.span<SignProps>`
   display: inline-block;
   position: relative;
-  font-size: ${props => props.size};
-  width: ${props => props.size};
-  height: ${props => props.size};
   cursor: pointer;
+
   &::before, &::after {
     position: absolute;
     content: ' ';
@@ -104,8 +105,6 @@ const CrossSignWrapper = styled.span<SignProps>`
     width: 1em;
     transition: all 0.4s ease;
     transform-origin: top left;
-    height: ${props => 0.2 * (props.weight ?? 1)}em;
-    background-color: ${props => props.color};
   };
   &::before { 
     transform: rotate(45deg) translate(-50%, -50%);
@@ -113,4 +112,17 @@ const CrossSignWrapper = styled.span<SignProps>`
   &::after {
     transform: rotate(-45deg) translate(-50%, -50%);
   };
+
+  ${props => {
+    const { size, color, weight } = { ...props };
+    return css`
+      font-size: ${size};
+      width: ${size};
+      height: ${size};
+      &::before, &::after {
+        height: ${0.2 * (weight ?? 1)}em;
+        background-color: ${color};
+      }
+    `
+  }}
 `;
